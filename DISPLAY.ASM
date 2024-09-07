@@ -1,5 +1,5 @@
-dis	SEGMENT
-	ASSUME CS:dis
+	MODEL SMALL
+	.CODE
 disp:
 PUBLIC disp
 	mov dx,0b800h
@@ -16,5 +16,4 @@ lp:
 	test ax,ax
 	jnz lp
 	ret
-dis	ENDS
 	END

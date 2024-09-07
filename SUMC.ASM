@@ -1,9 +1,9 @@
 ;link with tlink /t sumc+affiche,sum
-sum	SEGMENT
-	ASSUME CS:sum
+	MODEL SMALL
+	.CODE
 	EXTRN disp:PROC
 	ORG 100h ;COM file
-main: ;required for the entrypoint
+main:
 	xor ax,ax
 	mov dx,200
 lp:
@@ -15,5 +15,4 @@ lp:
 	call disp
 
 	ret
-sum	ENDS
-	END main
+	END main ;entrypoint

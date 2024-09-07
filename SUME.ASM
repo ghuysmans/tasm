@@ -1,8 +1,8 @@
 ;link with tlink sume+affiche,sum
-sum	SEGMENT
-	ASSUME CS:sum
+	MODEL SMALL
+	.CODE
 	EXTRN disp:PROC
-main: ;required for the entrypoint
+main:
 	xor ax,ax
 	mov dx,200
 lp:
@@ -16,6 +16,4 @@ lp:
 	xor al,al
 	mov ah,4Ch ;exit
 	int 21h
-
-sum	ENDS
-	END main
+	END main ;entrypoint

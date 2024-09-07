@@ -1,7 +1,7 @@
 ;single-segment version
-sum	SEGMENT
+	MODEL SMALL
+	.CODE
 	ORG 100h
-	ASSUME CS:sum
 main:
 	xor ax,ax
 	mov dx,200
@@ -24,5 +24,4 @@ lp:
 	test ax,ax
 	jnz lp
 	ret
-sum	ENDS
-	END main
+	END main ;entrypoint
