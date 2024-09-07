@@ -1,4 +1,3 @@
-;link with tlink sume+affiche,sum
 	MODEL SMALL
 	.CODE
 	EXTRN disp:PROC
