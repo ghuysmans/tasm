@@ -1,7 +1,7 @@
-	MODEL SMALL
-	.CODE
-disp:
+CODE	SEGMENT BYTE PUBLIC ;name compatible with Turbo Pascal, no alignment
+	ASSUME CS:CODE
 PUBLIC disp
+PROC disp NEAR
 	mov dx,0b800h
 	mov ds,dx
 	shl di,1 ;ds:di -> screen memory
@@ -16,4 +16,6 @@ lp:
 	test ax,ax
 	jnz lp
 	ret
+disp	ENDP
+CODE	ENDS
 	END
