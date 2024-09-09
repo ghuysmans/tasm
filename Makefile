@@ -1,4 +1,7 @@
 all: sum1.com sum.com sum.exe pinterop.exe uinterop.exe
+clean:
+	del *.obj
+	del *.map
 
 .asm.obj:
 	tasm $*
