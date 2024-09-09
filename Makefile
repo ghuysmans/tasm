@@ -1,4 +1,4 @@
-all: sum1.com sum.com sum.exe pinterop.exe uinterop.exe hex.com
+all: sum1.com sum.com sum.exe pinterop.exe uinterop.exe hex.com hex.exe
 clean:
 	del *.obj
 	del *.map
@@ -20,6 +20,7 @@ hex.com: puthex.obj hex.obj
 .pas.exe:
 	tpc $*
 pinterop.exe: pstub.obj display.obj pinterop.pas
+hex.exe: puthex.obj puthexs.obj hex.pas
 
 .pas.tpu:
 	tpc $*
